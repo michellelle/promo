@@ -8,8 +8,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -25,7 +24,7 @@
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Contact", new_contact_path %></li>
+        
 
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Apparel<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -61,13 +60,22 @@
             <li><a href="#"><span class="glyphicon glyphicon-user">Sign Up</a></li>
           </ul>
         </li>
-        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
 
+
 <%= yield %>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <h3>Contact Us</h3>
+  <br>
+  <p>Questions or comments are greatly appreciated.<a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
 
 </body>
 </html>
