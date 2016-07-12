@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   root 'products#index'
   
+  resources :contacts
   resources :products, only: [:show] 
   
   post 'quote', to: 'products#quote' 
