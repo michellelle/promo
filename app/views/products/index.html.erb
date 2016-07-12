@@ -1,0 +1,20 @@
+<div class="jumbotron text-center">
+  <h1>ASM Impex</h1> 
+  <p>We specialize in online-shopping</p> 
+  <form class="form-inline">
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-default">Subscribe</button>
+  </form>
+</div>
+
+<div class="flex one three-1000">
+    <% @products.each do |product| %> 
+        <article class="card">
+            <img src="<%= product.picture %>"> 
+            <footer> 
+                <h3><%= product.title %></h3>
+                <%= link_to "Buy", product_path(product), class: "btn btn-default" %> 
+            </footer>
+        </article>
+    <% end %>
+</div>

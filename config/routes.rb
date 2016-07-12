@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   get '/about' => 'pages#about'
-  root 'pages#home'
+  root 'products#index'
+  
+  resources :products, only: [:show] 
+  
+  post 'quote', to: 'products#quote' 
+  post 'order', to: 'products#order' 
+  get 'done', to: 'products#done' 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

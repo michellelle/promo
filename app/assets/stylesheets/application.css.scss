@@ -17,20 +17,35 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  
- 
-.padding {
- padding-top: 2cm;
+
+.nav {
+    font-size: 15px;
+}
+
+.main {
+    padding-top: 100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.body {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.btn-default, .btn {
+    background: #000;
+    color: #fff;
 }
 
 .carousel-inner img {
-    -webkit-filter: grayscale(40%);
-    filter: grayscale(40%); /* make all photos black and white */ 
+    -webkit-filter: grayscale(10%);
     width: 100%; /* Set width to 100% */
     margin: auto;
 }
 
-.carousel-caption h3 {
-    color: #fff !important;
+.carousel-caption h3, .p {
+    color: #fff;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 @media (max-width: 600px) {
@@ -39,8 +54,26 @@
     }
 }
 
+.hidden { 
+    display: none; 
+} 
+
+.logo {
+    width: 100%; 
+}
+
+.jumbotron, .h1 {
+    background: #ffffe6;
+    color: #6b6b47;
+    padding: 100px 25px;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #f4511e;
+    color: #6b6b47;
 }
