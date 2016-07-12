@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<div class='container'>
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -20,6 +21,7 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to root_path, class: 'navbar-brand' do %>
+       <i class="fa fa-diamond"></i>
         Online Store
       <% end %>
     </div>
@@ -31,7 +33,7 @@
         <!-- /.sign up / login -->
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-check"></span> Login<span class="caret"></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><span class="glyphicon glyphicon-user">Sign Up</a></li>
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Sign Up</a></li>
           </ul>
         </li>
       </ul>

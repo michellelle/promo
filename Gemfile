@@ -6,6 +6,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Use font awesome library for icons
+gem 'font-awesome-sass', '~> 4.2.0'
 # Use bootstrap-sass for style library
 gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
