@@ -42,6 +42,10 @@
 </nav>
 
 <div class="container">
+  <% flash.each do |key, value| %>
+   <%= content_tag :div, value, class: "alert alert-#{key}" %>
+  <% end %>
+  
   <%= yield %>
 </div>
 
@@ -51,7 +55,7 @@
   </a>
   <h3>Contact Us</h3>
   <br>
-  <p>Questions or comments are greatly appreciated.<%= link_to "Contact Us", new_contact_path %></p> 
+  <p>Questions or comments are greatly appreciated.<li><%= link_to "Contact Us", new_contact_path %></li></p> 
 </footer>
 
 </body>
