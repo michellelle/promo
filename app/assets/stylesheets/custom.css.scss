@@ -12,22 +12,30 @@
     font-size: 15px;
 }
 
+/* Dropdown links */
+.dropdown-menu li {
+    font-weight: 400;
+    color: #000;
+}
+
+.open .dropdown-toggle {
+    color: #000;
+    background-color: #555;
+}
+
+.dropdown-menu li:hover {
+    background-color: #b8b894;
+    color: #000;
+}
+
 .main {
     padding-top: 40px;
     width: 100%;
 }
 
-.show.html.erb {
-    margin-top: 40px;
-}
-
 .body {
     font-family: 'Maven Pro', sans-serif;
     padding-top: 40px;
-}
-
-.actions {
-    color: #000;
 }
 
 .btn-link {
@@ -37,11 +45,6 @@
 .btn-default, .btn {
     background: #000;
     color: #fff;
-}
-
-.submit {
-    background: #000;
-    color: #fff; 
 }
 
 .well {
