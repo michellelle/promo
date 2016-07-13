@@ -5,6 +5,7 @@
 
 .row {
      padding-top: 80px;
+     font-size: 15px;
 }
 
 .nav {
@@ -23,6 +24,14 @@
 .body {
     font-family: 'Maven Pro', sans-serif;
     padding-top: 40px;
+}
+
+.actions {
+    color: #000;
+}
+
+.btn-link {
+    color: #000;
 }
 
 .btn-default, .btn {

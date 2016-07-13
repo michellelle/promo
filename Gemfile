@@ -6,7 +6,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-
+# Use devise gem for user authentication.
 gem 'devise', '~> 4.1.1'
 # Use font awesome library for icons
 gem 'font-awesome-sass', '~> 4.2.0'
