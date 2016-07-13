@@ -3,7 +3,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
- 
+.row {
+     padding-top: 80px;
+}
 
 .nav {
     font-size: 15px;
@@ -26,6 +28,18 @@
 .btn-default, .btn {
     background: #000;
     color: #fff;
+}
+
+.submit {
+    background: #000;
+    color: #fff; 
+}
+
+.well {
+    background: #b8b894;
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .carousel-inner img {
