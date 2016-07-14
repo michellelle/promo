@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get '/about' => 'pages#about'
   root 'products#index'
-  
+  resources :users do
+    resource :profile
+  end
   resources :contacts
   resources :products, only: [:show] 
   
