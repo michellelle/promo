@@ -3,8 +3,8 @@
 <head>
   <title>Workspace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/picnicss/6.1.1/picnic.min.css">
@@ -29,7 +29,7 @@
         
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "About", about_path, method: :get %></li>
             
             <!-- /.sign up / login -->
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-check"></span> Login<span class="caret"></a>
