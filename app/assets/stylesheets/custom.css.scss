@@ -16,6 +16,12 @@
 .dropdown-menu li {
     font-weight: 400;
     color: #000;
+    text-decoration: none;
+}
+
+.collapse {
+    background-color: #e6e6e6;
+    color: #000;
 }
 
 .open .dropdown-toggle {
