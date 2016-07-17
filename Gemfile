@@ -8,9 +8,9 @@ end
 
 
 # Use figaro to hide secret keys
-gem 'figaro', '~> 1.1.1'
+gem 'figaro', '~> 1.0.0'
 # Use stripe for handling payments.
-gem 'stripe', '~> 1.33.1'
+gem 'stripe', '~> 1.16.1'
 # Use devise gem for user authentication.
 gem 'devise', '~> 4.1.1'
 # Use font awesome library for icons
