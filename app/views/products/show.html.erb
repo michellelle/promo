@@ -18,7 +18,7 @@
                 <small>UberRUSH is an on-demand delivery network powered by Uber. Once your order is picked up, you’ll receive a text message with a link to track your delivery in real time on the map. So you always know exactly when it will arrive. </small> 
             </p> 
                 
-            <div id="shipping-quote"> 
+            <div id="shipping-quote" class="hidden"> 
                 <%= form_tag "/quote", method: 'post', remote: true do %> 
                     <%= text_field_tag :address, nil, placeholder: "Street Address" %> 
                     <%= text_field_tag :city, nil, placeholder: "City" %> 
@@ -34,6 +34,23 @@
                 <p>Time Estimate: <span id="eta"></span></p> 
             </div> 
         
+        
+                <div id="checkout" class="show">
+                    <h3>Order Product</h3>
+                <%= form_tag '/order', method: 'post' do %>
+                    <%= text_field_tag :first_name, nil, placeholder: "First Name" %>
+                    <%= text_field_tag :last_name, nil, placeholder: "Last Name" %>
+                    <%= text_field_tag :email, nil, placeholder: "Email" %>
+                    <%= text_field_tag :number, nil, placeholder: "Cell Phone" %>
+                    <%= text_field_tag :address, nil, placeholder: "Street Address" %>
+                    <%= text_field_tag :city, nil, placeholder: "City" %>
+                    <%= text_field_tag :postal_code, nil, placeholder: "Postal Code" %>
+                    <%= hidden_field_tag :title , @product.title %>
+                    <%= hidden_field_tag :price , @product.price %>
+                    
+                     <% end %>
+            </div>
+            
         </div> 
     </div>
 </div>

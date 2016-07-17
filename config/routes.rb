@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :products, only: [:show] 
   
   post 'quote', to: 'products#quote' 
-  post 'order', to: 'products#order' 
+  post '/order', to: 'products#order' 
   get 'done', to: 'products#done' 
 
   # The priority is based upon order of creation: first created -> highest priority.
