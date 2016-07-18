@@ -45,7 +45,7 @@
                 <li role="separator" class="divider"></li>
                 <% if user_signed_in? %>
                 <% if current_user.profile %>
-                <li><%= link_to "Edit Your Profile", "#" %></li>
+                <li><%= link_to "Edit Your Profile", edit_user_profile_path(current_user) %></li>
                 <li><%= link_to  "View Your Profile", user_path(current_user) %></li>
                 <% else %>
                 <%= link_to "Create your Profile", new_user_profile_path(current_user) if current_user %>
