@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   get '/about' => 'pages#about'
   root 'products#index'
   resources :users do
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :products, only: [:show] 
   
   post 'quote', to: 'products#quote' 
-  post 'order', to: 'products#order' 
+  post '/order', to: 'products#order' 
   get 'done', to: 'products#done' 
 
   # The priority is based upon order of creation: first created -> highest priority.

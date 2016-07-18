@@ -5,6 +5,8 @@
 
 .row {
      padding-top: 80px;
+     padding-left: 80px;
+     padding-right: 80px;
      font-size: 15px;
 }
 
@@ -15,6 +17,12 @@
 /* Dropdown links */
 .dropdown-menu li {
     font-weight: 400;
+    color: #000;
+    text-decoration: none;
+}
+
+.collapse {
+    background-color: #e6e6e6;
     color: #000;
 }
 
