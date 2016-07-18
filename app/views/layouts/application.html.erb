@@ -43,6 +43,14 @@
                   <li><%= link_to "Sign In", new_user_session_path, method: :get %></li>
                 <% end %>
                 <li role="separator" class="divider"></li>
+                <% if user_signed_in? %>
+                <% if current_user.profile %>
+                <li><%= link_to "Edit Your Profile", "#" %></li>
+                <li><%= link_to  "View Your Profile", user_path(current_user) %></li>
+                <% else %>
+                <%= link_to "Create your Profile", new_user_profile_path(current_user) if current_user %>
+                <% end %>
+                <% end %>
                 <li><a href="#">FAQ's</a></li>
               </ul>
             </li>
@@ -66,13 +74,21 @@
       <br>
       <h3><%= link_to "Contact Us", new_contact_path %></h3>
       <div class="btn-group">
-          <!--Facebook-->
-          <button type="button" class="btn btn-lg btn-fb"><i class="fa fa-facebook"></i></button>
-          <!--Facebook-->
-          <button type="button" class="btn btn-lg btn-tw"><i class="fa fa-twitter"></i></button>
-          <!--Facebook-->
-          <button type="button" class="btn btn-lg btn-ins"><i class="fa fa-instagram"></i></button>
+        <!--Facebook-->
+        <button type="button" class="btn btn-lg btn-fb"><i class="fa fa-facebook"></i></button>
+        <!--Facebook-->
+        <button type="button" class="btn btn-lg btn-tw"><i class="fa fa-twitter"></i></button>
+        <!--Facebook-->
+        <button type="button" class="btn btn-lg btn-ins"><i class="fa fa-instagram"></i></button>
+      </div>
+
+      <div class="col-md-6">
+        <div class="well">
+          <h2 class="text-center">ASM ™ Community</h2>
+          <%= link_to "Visit the Community", "#", class: 'btn btn-default btn-lg' %>
         </div>
+      </div>
     </footer>
   </body>
 </html>
+
