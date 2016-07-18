@@ -7,6 +7,8 @@ group :production do
 end
 
 
+# Use paperclip for image uploads
+gem 'paperclip', '~> 4.3.6'
 # Use figaro to hide secret keys
 gem 'figaro', '~> 1.0.0'
 # Use stripe for handling payments.
