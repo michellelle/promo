@@ -49,6 +49,18 @@
                     <%= hidden_field_tag :price , @product.price %>
                     
                      <% end %>
+                     
+                     <form action="/charges" method="POST">
+                          <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_3eCsVdCaj6V0AwGDLkTMjtC5"
+                            data-amount="2000"
+                            data-name="Demo Site"
+                            data-description="2 widgets"
+                            data-image="/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                          </script>
+                    </form>
             </div>
             
         </div> 
