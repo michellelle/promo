@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
             :card  => params[:stripeToken]
         )
         
-        items = [
+        products = [
             {
                 title: params[:title],
                 quantity: 1,
@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
             }
         ]
         
-        charge = Stripe::Charge.create(
+        charges = Stripe::Charge.create(
             :customer => customer.id,
             :amount => @amount,
             :description => params[:title],

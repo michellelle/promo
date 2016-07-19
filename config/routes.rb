@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     resource :profile
   end
   resources :contacts
-  resources :products, only: [:show] 
-  
+  resources :products, only: [:show, :create] 
+  resources :charges, only: [:show, :create, :charge]
   post 'quote', to: 'products#quote' 
   post '/order', to: 'products#order' 
   get 'done', to: 'products#done' 
