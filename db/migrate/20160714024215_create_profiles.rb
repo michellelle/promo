@@ -9,7 +9,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :contact_email
       t.text :description
       
-      t.timestamp
+      t.timestamps
     end
   end
 end

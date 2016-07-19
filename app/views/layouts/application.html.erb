@@ -6,7 +6,11 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
   <%= javascript_include_tag 'application' %>
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> development
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/picnicss/6.1.1/picnic.min.css">
@@ -43,6 +47,14 @@
                   <li><%= link_to "Sign In", new_user_session_path, method: :get %></li>
                 <% end %>
                 <li role="separator" class="divider"></li>
+                <% if user_signed_in? %>
+                <% if current_user.profile %>
+                <li><%= link_to "Edit Your Profile", edit_user_profile_path(current_user) %></li>
+                <li><%= link_to  "View Your Profile", user_path(current_user) %></li>
+                <% else %>
+                <%= link_to "Create your Profile", new_user_profile_path(current_user) if current_user %>
+                <% end %>
+                <% end %>
                 <li><a href="#">FAQ's</a></li>
               </ul>
             </li>
@@ -66,13 +78,14 @@
       <br>
       <h3><%= link_to "Contact Us", new_contact_path %></h3>
       <div class="btn-group">
-          <!--Facebook-->
-          <button type="button" class="btn btn-lg btn-fb"><i class="fa fa-facebook"></i></button>
-          <!--Facebook-->
-          <button type="button" class="btn btn-lg btn-tw"><i class="fa fa-twitter"></i></button>
-          <!--Facebook-->
-          <button type="button" class="btn btn-lg btn-ins"><i class="fa fa-instagram"></i></button>
-        </div>
+        <!--Facebook-->
+        <button type="button" class="btn btn-lg btn-fb"><i class="fa fa-facebook"></i></button>
+        <!--Facebook-->
+        <button type="button" class="btn btn-lg btn-tw"><i class="fa fa-twitter"></i></button>
+        <!--Facebook-->
+        <button type="button" class="btn btn-lg btn-ins"><i class="fa fa-instagram"></i></button>
+      </div>
     </footer>
   </body>
 </html>
+

@@ -1,0 +1,32 @@
+<div class="container-fluid text-center">
+  <h3 class="margin">ASM - Impex</h3>
+  <p>World-Class Industry specializing in electronics, clothing, materials, imported textiles, and much more...</p>
+    <img src="http://41.media.tumblr.com/0515719099389a401818068d800450ed/tumblr_inline_nt08nbCAz81rjic88_1280.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236">
+</div>
+
+<div class="col-md-6 col-md-offset-3">
+  <h1 class="margin text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1><br>
+  <div class="row">
+    <div class="col-md-3 text-center">
+    <%= image_tag @user.profile.avatar.url %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= @user.profile.description %>
+    </div>
+    <div class="col-md-4">
+      <%= job_title_icon %><%= @user.profile.job_title %>
+    </div>  
+    <div class="col-md-4">
+      <%= @user.profile.contact_email %>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="margin text-center">ASM ™ Impex Community</h2>
+      <div class="container-fluid text-center">
+      <%= link_to "Visit the Community", "#", class: 'btn btn-default' %>
+    </div>
+</div>
