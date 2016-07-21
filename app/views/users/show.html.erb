@@ -8,7 +8,7 @@
   <h1 class="margin text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1><br>
   <div class="row">
     <div class="col-md-3 text-center">
-    <%= image_tag @user.profile.avatar.url %>
+    <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
     </div>
   </div>
   <div class="row">
