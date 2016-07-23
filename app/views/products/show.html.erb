@@ -17,40 +17,11 @@
             <p> 
                 <small>UberRUSH is an on-demand delivery network powered by Uber. Once your order is picked up, you’ll receive a text message with a link to track your delivery in real time on the map. So you always know exactly when it will arrive. </small> 
             </p> 
+            
+            
                 
-            <div id="shipping-quote" class="hidden"> 
-                <%= form_tag "/quote", method: 'post', remote: true do %> 
-                    <%= text_field_tag :address, nil, placeholder: "Street Address" %> 
-                    <%= text_field_tag :city, nil, placeholder: "City" %> 
-                    <%= text_field_tag :postal_code, nil, placeholder: "Postal Code" %> 
-                    <%= submit_tag "Get a Delivery Quote" %> 
-                <% end %> 
-            </div> 
-            <br/> 
-                
-            <div id="quote-info" class="hidden"> 
-                <h3>Quote Details</h3> 
-                <p>Cost Estimate: <span id="shipping-cost"></span></p> 
-                <p>Time Estimate: <span id="eta"></span></p> 
-            </div> 
-        
-        
-                <div id="checkout" class="show">
-                    <h3>Order Product</h3>
-                <%= form_tag '/order', method: 'post' do %>
-                    <%= text_field_tag :first_name, nil, placeholder: "First Name" %>
-                    <%= text_field_tag :last_name, nil, placeholder: "Last Name" %>
-                    <%= text_field_tag :email, nil, placeholder: "Email" %>
-                    <%= text_field_tag :number, nil, placeholder: "Cell Phone" %>
-                    <%= text_field_tag :address, nil, placeholder: "Street Address" %>
-                    <%= text_field_tag :city, nil, placeholder: "City" %>
-                    <%= text_field_tag :postal_code, nil, placeholder: "Postal Code" %>
-                    <%= hidden_field_tag :title , @product.title %>
-                    <%= hidden_field_tag :price , @product.price %>
-                    
-                     <% end %>
                      
-                     <form action="/charges" method="POST">
+                     <form action="/charges" method="POST" id="payment-form">
                           <script
                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="pk_test_3eCsVdCaj6V0AwGDLkTMjtC5"
