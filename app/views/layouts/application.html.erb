@@ -4,11 +4,16 @@
   <title>Asm-Impex</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
-  <%= javascript_include_tag 'application' %>
+  <script type="text/javascript">
+  Stripe.setPublishableKey('pk_test_3eCsVdCaj6V0AwGDLkTMjtC5');
+  </script>
+  <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %> 
+  <%= javascript_include_tag 'application', 'function' %>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/picnicss/6.1.1/picnic.min.css">
+  <link href="https://api.stripe.com">
   <%= csrf_meta_tags %>
 </head>
   <body class="row">
@@ -21,9 +26,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to root_path, class: "navbar-brand" do %>
-           <i class="fa fa-diamond"></i>
-              Online Store
+          <%= link_to root_path, class: 'navbar-brand' do %>
+           <i class="fa fa-home" aria-hidden="true"></i>
+              ASM - Impex
           <% end %>
         </div>
         
@@ -34,21 +39,23 @@
             <!-- /.sign up / login -->
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-check"></span> Login<span class="caret"></a>
               <ul class="dropdown-menu" role="menu">
-                <% if current_user %>
+                <% if user_signed_in? %>
                   <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
                 <% else %>
                   <li><%= link_to "Sign Up", new_user_registration_path, method: :get %></li>
                   <li><%= link_to "Sign In", new_user_session_path, method: :get %></li>
                 <% end %>
-                <li role="separator" class="divider"></li>
                 <% if user_signed_in? %>
                 <% if current_user.profile %>
+                <li><%= link_to "Community", users_path %></li>
+                <li><%= link_to "My Account", edit_user_registration_path %></li>
                 <li><%= link_to "Edit Your Profile", edit_user_profile_path(current_user) %></li>
                 <li><%= link_to  "View Your Profile", user_path(current_user) %></li>
                 <% else %>
                 <%= link_to "Create your Profile", new_user_profile_path(current_user) if current_user %>
                 <% end %>
                 <% end %>
+                <li role="separator" class="divider"></li>
                 <li><a href="#">FAQ's</a></li>
               </ul>
             </li>

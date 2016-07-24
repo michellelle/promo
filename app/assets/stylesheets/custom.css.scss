@@ -42,7 +42,7 @@
 }
 
 .body {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     padding-top: 40px;
 }
 
@@ -56,26 +56,35 @@
 }
 
 .well {
-    background: #b8b894;
+    background: #ebebe0;
     color: #000;
     text-decoration: none;
     font-size: 15px;
 }
 
-.carousel-inner img {
-    -webkit-filter: grayscale(10%);
-    width: 100%; /* Set width to 100% */
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #008080;
 }
 
-.carousel-caption h3, .p {
-    color: #fff;
-    font-family: 'Maven Pro', sans-serif;
+.carousel-indicators li {
+    border-color: #008080;
 }
 
-@media (max-width: 600px) {
-    .carousel-caption {
-        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
+.carousel-indicators li.active {
+    background-color: #008080;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
 }
 
 .hidden { 
@@ -88,7 +97,7 @@
 
 .jumbotron, .h1 {
     background: #ffffe6;
-    color: #6b6b47;
+    color: #000;
     padding: 100px 25px;
 }
 

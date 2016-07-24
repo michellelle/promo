@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-    default to: 'upgrade2mode@gmail.com'
+    default to: 'asm.impex@yahoo.com'
     
     def contact_email(name, email, body)
         @name = name

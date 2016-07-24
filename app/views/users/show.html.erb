@@ -8,7 +8,7 @@
   <h1 class="margin text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1><br>
   <div class="row">
     <div class="col-md-3 text-center">
-    <%= image_tag @user.profile.avatar.url %>
+    <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>
     </div>
   </div>
   <div class="row">
@@ -27,6 +27,6 @@
 <div class="col-md-4 col-md-offset-4">
   <h2 class="margin text-center">ASM ™ Impex Community</h2>
       <div class="container-fluid text-center">
-      <%= link_to "Visit the Community", "#", class: 'btn btn-default' %>
+      <%= link_to "Visit the Community", users_path, class: 'btn btn-default' %>
     </div>
 </div>
