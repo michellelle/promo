@@ -11,6 +11,7 @@
   <%= javascript_include_tag 'application', 'function' %>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/picnicss/6.1.1/picnic.min.css">
   <link href="https://api.stripe.com">
   <%= csrf_meta_tags %>
@@ -25,9 +26,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to root_path, class: "navbar-brand" do %>
-           <i class="fa fa-diamond"></i>
-              Online Store
+          <%= link_to root_path, class: 'navbar-brand' do %>
+           <i class="fa fa-home" aria-hidden="true"></i>
+              ASM - Impex
           <% end %>
         </div>
         
