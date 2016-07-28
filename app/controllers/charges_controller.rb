@@ -8,7 +8,6 @@ end
     
     def create
       # Amount in cents
-      @price = params[:price]
    
       customer = Stripe::Customer.create(
         :email => params[:stripeEmail],
@@ -21,7 +20,7 @@ end
       
       charge = Stripe::Charge.create(
         :customer    => customer.id,
-        :amount      => @price,
+        :amount      => @amount,
         :description => 'Rails Stripe customer',
         :currency    => 'usd'
       )
@@ -30,4 +29,3 @@ end
       flash[:error] = e.message
       redirect_to new_charge_path
     end
-end
