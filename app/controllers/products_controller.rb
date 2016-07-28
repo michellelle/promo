@@ -4,8 +4,12 @@ class ProductsController < ApplicationController
     end 
     
     def show
-        @product = Product.find(params[:id]) 
-    end 
+        @product = Product.find(params[:id])
+    end
+    
+    def show
+        @user = User.find( params[:id] )
+    end
     
     def quote # code for UberRUSH shipping quote 
     end 

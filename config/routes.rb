@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   resources :charges, only: [:show, :create, :charge]
   post 'quote', to: 'products#quote' 
   post '/order', to: 'products#order' 
-  get 'done', to: 'products#done' 
+  get 'done', to: 'products#done'
+  get '/faqs' => 'pages#faqs'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

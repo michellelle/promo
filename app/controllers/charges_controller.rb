@@ -1,11 +1,14 @@
 class ChargesController < ApplicationController
-
+  has_secure_token
+  has_secure_token :auth_token
+end
+  
     def new
     end
     
     def create
       # Amount in cents
-      @amount = params[:amount]
+      @price = params[:price]
    
       customer = Stripe::Customer.create(
         :email => params[:stripeEmail],
@@ -16,9 +19,9 @@ class ChargesController < ApplicationController
         Stripe.api_key = "sk_test_NjOOMGCyPpGY8xvpOxjETJuy"
 
       
-      charges = Stripe::Charge.create(
+      charge = Stripe::Charge.create(
         :customer    => customer.id,
-        :amount      => @amount,
+        :amount      => @price,
         :description => 'Rails Stripe customer',
         :currency    => 'usd'
       )
