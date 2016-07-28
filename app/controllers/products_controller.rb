@@ -7,10 +7,6 @@ class ProductsController < ApplicationController
         @product = Product.find(params[:id])
     end
     
-    def show
-        @user = User.find( params[:id] )
-    end
-    
     def quote # code for UberRUSH shipping quote 
     end 
     
