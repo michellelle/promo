@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
     end 
     
     def show
-        @product = Product.find(params[:id])
+        @products = Product.find(params[:id])
     end
     
     def quote # code for UberRUSH shipping quote 
@@ -24,6 +24,16 @@ class ProductsController < ApplicationController
             }
         ]
         
+        @amount = ((params[:price].to_f + response["fee"]) * 100).to_i
+    
+    Stripe.api_key = "sk_test_NjOOMGCyPpGY8xvpOxjETJuy"
+
+        # Get the credit card details submitted by the form
+        token = params[:stripeToken]
+    end
+        # Create the charge on Stripe's servers - this will charge the user's card
+        begin
+        
         charge = Stripe::Charge.create(
             :customer => customer.id,
             :amount => @amount,
@@ -39,5 +49,5 @@ class ProductsController < ApplicationController
     end 
     
     def done # code for confirmation page 
-    end 
+    end
 end

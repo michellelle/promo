@@ -18,8 +18,20 @@
                 <small>UberRUSH is an on-demand delivery network powered by Uber. Once your order is picked up, you’ll receive a text message with a link to track your delivery in real time on the map. So you always know exactly when it will arrive. </small> 
             </p> 
             
-            
-                
+            <div id="checkout" class="show">
+                <h3>Order Product</h3>
+                <%= form_tag "/order", method: 'post' do %>
+                    <%= text_field_tag :first_name, nil, placeholder: "First Name" %>
+                    <%= text_field_tag :last_name, nil, placeholder: "Last Name" %>
+                    <%= text_field_tag :email, nil, placeholder: "Email" %>
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="Shoes"
+                  data-amount="">
+              </script>
+            <% end %>
+          </div>
+
                      
                      <form action="/charges" method="POST" id="payment-form">
                           <script
